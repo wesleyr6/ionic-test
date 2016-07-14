@@ -69,4 +69,24 @@ angular.module('starter.services', [])
 			accountItems.splice(accountItems.indexOf(chat), 1);
 		}
 	};
+})
+
+.factory('Match', function() {
+	var match = [{
+		description: 'Batman Arkan City',
+		category: 'Games',
+		photo: 'img/ben.png'
+	},
+
+	{
+		description: 'Volkswagem Fusca',
+		category: 'Collectibles',
+		photo: 'img/ben.png'
+	}];
+
+	return {
+		all: function() {
+			return match;
+		}
+	};
 });
