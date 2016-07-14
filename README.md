@@ -1,4 +1,4 @@
-# Learn Ionic
+# Learning Ionic
 Basic test with Ionic and Cordova
 
 ## Clone project
