@@ -1,6 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('MatchCtrl', function($scope, Match) {
+	$scope.match = Match.all();
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
 	// With the new view caching in Ionic, Controllers are only called
@@ -18,9 +20,8 @@ angular.module('starter.controllers', [])
 })
 
 .controller('AccountCtrl', function($scope, Account) {
-	console.log(Account);
 	$scope.accountItems = Account.all();
-	$scope.remove = function(chat) {
+	$scope.remove = function(accountItems) {
 		Account.remove(accountItems);
 	};
 })
