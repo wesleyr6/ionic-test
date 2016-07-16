@@ -1,14 +1,51 @@
-<!--
-  This template loads for the 'tab.friend-detail' state (app.js)
-  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
-  The FriendsCtrl pulls data from the Friends service (service.js)
-  The Friends service returns an array of friend data
--->
-<ion-view view-title="{{chat.name}}">
-  <ion-content class="padding">
-    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{chat.lastText}}
-    </p>
-  </ion-content>
+<ion-view view-title="{{chat.name}}" hide-back-button="false">
+	<ion-content class="padding">
+		<div class="chat-box you-message">
+			<div class="balloon-box">
+				<p>Oi, tudo bem?</p>
+			</div>
+			<p class="chat-date">19 de abril de 2016</p>
+		</div>
+
+		<div class="chat-box their-message">
+			<div class="balloon-box">
+				<p>Olá, tudo e você?</p>
+			</div>
+			<p class="chat-date">19 de abril de 2016</p>
+		</div>
+
+		<div class="chat-box you-message">
+			<div class="balloon-box">
+				<p>Tudo certo. E aí, fazendo o que no feriadão?</p>
+			</div>
+			<p class="chat-date">19 de abril de 2016</p>
+		</div>
+
+		<div class="chat-box their-message">
+			<div class="balloon-box">
+				<p>Cheguei hoje de viagem, agora me preparar psicologicamente para trabalhar amanhã.</p>
+			</div>
+			<p class="chat-date">19 de abril de 2016</p>
+		</div>
+
+		<div class="chat-box their-message">
+			<div class="balloon-box">
+				<p>rsrs.</p>
+			</div>
+			<p class="chat-date">19 de abril de 2016</p>
+		</div>
+	</ion-content>
+
+	<div class="bar bar-footer bar-stable comment-stable-main">
+        <div class="row small-font row-comment">
+            <span class="col-75">
+            	<label class="item item-input comment-div-label">
+                    <textarea class="comment-main-text ng-pristine ng-untouched ng-invalid ng-invalid-required" required="" ng-model="datamessage" name="message" placeholder="Message" auto-focus=""></textarea>
+               	</label>
+            </span>
+            <span class="col-25">
+                <button ng-disabled="postForm.$invalid" class="button button-block button-assertive button-comment" disabled="disabled"><span class="icon ion-android-send"></span></button>
+            </span>
+        </div>
+	</div>
 </ion-view>
