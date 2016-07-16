@@ -1,0 +1,23 @@
+<ion-view view-title="{{title}}" class="match">
+	<ion-content class="padding">
+		<div class="button-bar categories-bar">
+            <button class="button button-positive button-block">Games</button>
+            <a ui-sref="tab.collectibles" class="button button-stable button-block">Collectibles</a>
+        </div>
+
+        <div class="match-items">
+        	<figure>
+				<img ng-src="{{items[0].photo}}">
+			</figure>
+			<p class="match-items-description">
+				{{items[0].description}} <span ng-if="items[0].platform">- {{items[0].platform}}</span> 
+			</p>
+        </div>
+
+		<div class="button-bar">
+			<a ui-sref="tab.games2" class="button button-stable button-large button-block icon ion-refresh"></a>
+			<a ui-sref="tab.games2" class="button button-stable button-large button-block icon ion-close"></a>
+			<a ui-sref="tab.math" class="button button-stable button-large button-block icon ion-heart"></a>
+		</div>
+	</ion-content>
+</ion-view>
