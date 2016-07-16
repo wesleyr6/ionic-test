@@ -1,7 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('MatchCtrl', function($scope, Match) {
-	$scope.match = Match.all();
+.controller('GamesCtrl', function($scope, $location, Games) {
+	$scope.title = 'Games';
+	$scope.items = Games.all();
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
