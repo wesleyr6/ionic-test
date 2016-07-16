@@ -1,1 +1,101 @@
-/* Empty. Add your own CSS if you like */
+body {
+	font-family: 'Source Sans Pro', arial, helvetica, sans-serif;
+}
+
+.bar-footer {
+	bottom: 0px;
+	height: 53px;
+}
+
+.bar-footer textarea {
+	height: 23px;
+	border-radius: 2px;
+}
+
+.bar-footer button {
+	margin-left: 5px;
+	margin-top: 0px !important;
+}
+
+.pull-left {
+	float: left;
+}
+
+.tabs-icon-top > .tabs .tab-item {
+	line-height: inherit;
+}
+
+.categories-bar.button-bar .button.button-block {
+	margin-top: 0px;
+}
+
+/* MATCHs */
+.match .button-bar .ion-refresh {
+	color: #FABE00;
+}
+
+.match .button-bar .ion-close {
+	color: #FF0000;
+}
+
+.match .button-bar .ion-heart {
+	color: #55CF06;
+}
+
+.match .match-items figure {
+	height: 280px;
+	text-align: center;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.match .match-items figure img {
+	max-height: 280px;
+}
+
+.match .match-items .match-items-description {
+	font-size: 15px;
+	line-height: 20px;
+	height: 38px;
+	margin-bottom: 0px;
+	overflow: hidden;
+	text-align: center;
+}
+
+/* CHAT */
+.chat-box {
+	margin-bottom: -5px;
+}
+
+.chat-box .balloon-box {
+	max-width: 60%;
+    padding: 10px 10px 3px 10px;
+    border-radius: 5px;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.chat-box .chat-date {
+	font-size: 9px;
+	color: #666;
+	clear: both;
+}
+
+.chat-box.their-message .balloon-box {
+	background-color: #2AB3C6;
+	float: left;
+	color: #fff;
+}
+
+.chat-box.their-message .chat-date {
+	text-align: left;
+}
+
+.chat-box.you-message .balloon-box {
+	background-color: #F4F4F4;
+	float: right;
+}
+
+.chat-box.you-message .chat-date {
+	text-align: right;
+}
