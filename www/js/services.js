@@ -71,22 +71,26 @@ angular.module('starter.services', [])
 	};
 })
 
-.factory('Match', function() {
-	var match = [{
+.factory('Games', function() {
+	var games = [{
+		id: 0,
 		description: 'Batman Arkan City',
+		platform: 'Xbox',
 		category: 'Games',
-		photo: 'img/ben.png'
+		photo: 'img/batman.jpg'
 	},
 
 	{
-		description: 'Volkswagem Fusca',
+		id: 1,
+		description: 'Boneco Hulk Marvel',
+		platform: '',
 		category: 'Collectibles',
-		photo: 'img/ben.png'
+		photo: 'img/hulk.jpg'
 	}];
 
 	return {
 		all: function() {
-			return match;
+			return games;
 		}
 	};
 });
