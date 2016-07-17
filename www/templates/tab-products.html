@@ -1,0 +1,24 @@
+<ion-view view-title="{{title}}" class="match">
+	<ion-content class="padding">
+        <div ng-include="'templates/category.html'"></div>
+		
+		<ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true" show-pager="false">
+	        <ion-slide ng-repeat="item in items">
+		        <div class="match-items">
+		        	<figure>
+						<img ng-src="{{item.photo}}">
+					</figure>
+					<p class="match-items-description">
+						{{item.description}} <span ng-if="item.platform">- {{item.platform}}</span> 
+					</p>
+		        </div>
+		    </ion-slide>
+       	</ion-slide-box>
+
+       	<div class="button-bar">
+			<button ng-click="nextSlide()" class="button button-stable button-large button-block icon ion-refresh"></button>
+			<button ng-click="nextSlide()" class="button button-stable button-large button-block icon ion-close"></button>
+			<a ui-sref="tab.match" class="button button-stable button-large button-block icon ion-heart"></a>
+		</div>
+	</ion-content>
+</ion-view>
