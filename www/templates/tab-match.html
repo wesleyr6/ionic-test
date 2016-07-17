@@ -1,0 +1,34 @@
+<ion-view view-title="{{title}}" class="match">
+	<ion-content class="padding">
+        <div class="match-items">
+        	<p class="match-info">
+        		Seu item foi combinado com o <br>
+        		<strong>
+        			"{{items[1].description}}" 
+        			<span ng-if="items[1].platform">- {{items[0].platform}}</span>
+        		</strong>
+        	</p>
+
+        	<figure>
+				<img ng-src="{{items[1].photo}}">
+			</figure>
+
+			<p class="match-items-description">
+				Conversar com combinação
+			</p>
+        </div>
+	</ion-content>
+
+	<div class="bar bar-footer bar-stable comment-stable-main">
+        <div class="row small-font row-comment">
+            <span class="col-75">
+            	<label class="item item-input comment-div-label">
+                    <textarea class="comment-main-text ng-pristine ng-untouched ng-invalid ng-invalid-required" required="" ng-model="datamessage" name="message" placeholder="Message" auto-focus=""></textarea>
+               	</label>
+            </span>
+            <span class="col-25">
+                <button ng-disabled="postForm.$invalid" class="button button-block button-assertive button-comment" disabled="disabled"><span class="icon ion-android-send"></span></button>
+            </span>
+        </div>
+	</div>
+</ion-view>
