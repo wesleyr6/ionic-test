@@ -18,6 +18,22 @@ body {
 	margin-top: 0px;
 }
 
+/* LOGIN */
+.login {
+	background: #FAFAFA;
+}
+
+.login figure {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.login .icon-facebook::before {
+	position: relative;
+	margin-right: 10px;
+	top: -2px;
+}
+
 /* MATCHs */
 .match .button-bar .ion-refresh {
 	color: #FABE00;

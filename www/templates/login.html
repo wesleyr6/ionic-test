@@ -1,0 +1,25 @@
+<ion-view view-title="{{title}}" class="login">
+	<ion-content class="padding">
+		<figure>
+			<img src="img/logo.png" height="130" alt="Logotipo image">
+		</figure>
+
+        <form>
+            <ion-list>
+                <label class="item item-input" name="username">
+                    <input type="text" placeholder="username">
+                </label>
+
+                <label class="item item-input" name="password">
+                    <input type="password" placeholder="password">
+                </label>
+            </ion-list>
+            
+            <a ui-sref="tab.games" class="button button-dark button-block">Log in</a>
+            
+            <div class="spacer" style="height: 20px;"></div>
+            
+            <a ui-sref="tab.games" class="button button-royal button-block icon ion-social-facebook icon-facebook">Log in with facebook</a>
+        </form>
+	</ion-content>
+</ion-view>
