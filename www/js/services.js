@@ -73,7 +73,6 @@ angular.module('starter.services', [])
 
 .factory('Games', function() {
 	var games = [{
-		id: 0,
 		description: 'Batman Arkan City',
 		platform: 'Xbox',
 		category: 'Games',
@@ -81,7 +80,28 @@ angular.module('starter.services', [])
 	},
 
 	{
-		id: 1,
+		description: 'Batman Arkan City',
+		platform: 'Xbox',
+		category: 'Games',
+		photo: 'img/batman.jpg'
+	}];
+
+	return {
+		all: function() {
+			return games;
+		}
+	};
+})
+
+.factory('Collectibles', function() {
+	var collectibles = [{
+		description: 'Boneco Hulk Marvel',
+		platform: '',
+		category: 'Collectibles',
+		photo: 'img/hulk.jpg'
+	},
+
+	{
 		description: 'Boneco Hulk Marvel',
 		platform: '',
 		category: 'Collectibles',
@@ -90,7 +110,7 @@ angular.module('starter.services', [])
 
 	return {
 		all: function() {
-			return games;
+			return collectibles;
 		}
 	};
 });
