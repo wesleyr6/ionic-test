@@ -1,16 +1,16 @@
 <ion-view view-title="{{title}}" class="match">
 	<ion-content class="padding">
-        <div class="match-items">
+        <div class="match-items" ng-repeat="item in items">
         	<p class="match-info">
         		Seu item foi combinado com o <br>
         		<strong>
-        			"{{items[1].description}}" 
-        			<span ng-if="items[1].platform">- {{items[0].platform}}</span>
+        			"{{item.description}}" 
+        			<span ng-if="item.platform">- {{item.platform}}</span>
         		</strong>
         	</p>
 
         	<figure>
-				<img ng-src="{{items[1].photo}}">
+				<img ng-src="{{item.photo}}">
 			</figure>
 
 			<p class="match-items-description">

@@ -50,11 +50,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 	})
 
 	.state('tab.match', {
-		url: '/games',
+		url: '/match',
 		views: {
-			'tab-games': {
+			'tab-products': {
 				templateUrl: 'templates/tab-match.html',
-				controller: 'GamesCtrl'
+				controller: 'MatchCtrl'
 			}
 		}
 	})

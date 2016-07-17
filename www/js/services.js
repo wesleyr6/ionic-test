@@ -104,8 +104,24 @@ angular.module('starter.services', [])
 
 	return {
 		all: function() {
-			console.log('teste', products)
 			return products;
 		}
 	};
 })
+
+.factory('Match', function() {
+	var match = [
+		{
+			category: 'Colecionáveis',
+			description: 'Boneco Hulk Marvel',
+			platform: '',
+			photo: 'img/hulk.jpg'
+		}
+	];
+
+	return {
+		all: function() {
+			return match;
+		}
+	};
+});
