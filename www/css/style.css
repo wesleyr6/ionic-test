@@ -2,19 +2,8 @@ body {
 	font-family: 'Source Sans Pro', arial, helvetica, sans-serif;
 }
 
-.bar-footer {
-	bottom: 0px;
-	height: 53px;
-}
-
-.bar-footer textarea {
-	height: 23px;
-	border-radius: 2px;
-}
-
-.bar-footer button {
-	margin-left: 5px;
-	margin-top: 0px !important;
+.text-center {
+	text-align: center;
 }
 
 .pull-left {
@@ -40,6 +29,13 @@ body {
 
 .match .button-bar .ion-heart {
 	color: #55CF06;
+}
+
+.match .match-info {
+	font-size: 20px;
+	line-height: 26px;
+	margin: 10px 0 20px 0;
+	text-align: center;
 }
 
 .match .match-items figure {
@@ -98,4 +94,38 @@ body {
 
 .chat-box.you-message .chat-date {
 	text-align: right;
+}
+
+/* PROFILE */
+.profile {
+	margin: 10px 0;
+}
+
+.profile figure {
+	margin-bottom: 5px;
+}
+
+.profile figure img {
+	max-height: 120px;
+	border-radius: 60px;
+}
+
+.profile p {
+	font-size: 16px;
+}
+
+/* FOOTER BAR */
+.bar-footer {
+	bottom: 0px;
+	height: 53px;
+}
+
+.bar-footer textarea {
+	height: 23px;
+	border-radius: 2px;
+}
+
+.bar-footer button {
+	margin-left: 5px;
+	margin-top: 0px !important;
 }
