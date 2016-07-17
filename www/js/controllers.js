@@ -1,17 +1,15 @@
 angular.module('starter.controllers', [])
 
-.controller('GamesCtrl', function($scope, $ionicSlideBoxDelegate, Games) {
-	$scope.title = 'Games';
-	$scope.items = Games.all();
-
-	$scope.nextSlide = function() {
-		$ionicSlideBoxDelegate.next();
-	}
-})
-
-.controller('CollectiblesCtrl', function($scope, $ionicSlideBoxDelegate, Collectibles) {
+.controller('ProductsCtrl', function($scope, $ionicSlideBoxDelegate, $location, Products) {
+	var getCategoryProduct = $location.path().split('/').pop();
+	
 	$scope.title = 'Colecionáveis';
-	$scope.items = Collectibles.all();
+
+	if( getCategoryProduct == 'games' ){
+		$scope.title = 'Games';
+	}
+	
+	$scope.items = Products.all();
 
 	$scope.nextSlide = function() {
 		$ionicSlideBoxDelegate.next();

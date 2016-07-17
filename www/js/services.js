@@ -71,46 +71,41 @@ angular.module('starter.services', [])
 	};
 })
 
-.factory('Games', function() {
-	var games = [{
-		description: 'Batman Arkan City',
-		platform: 'Xbox',
-		category: 'Games',
-		photo: 'img/batman.jpg'
-	},
+.factory('Products', function() {
+	var products = [
+		{
+			category: 'Games',
+			description: 'Batman Arkan City',
+			platform: 'Xbox',
+			photo: 'img/batman.jpg'
+		},
 
-	{
-		description: 'Batman Arkan City',
-		platform: 'Xbox',
-		category: 'Games',
-		photo: 'img/batman.jpg'
-	}];
+		{
+			category: 'Games',
+			description: 'Batman Arkan City',
+			platform: 'Xbox',
+			photo: 'img/ben.png'
+		},
+
+		{
+			category: 'Colecionáveis',
+			description: 'Boneco Hulk Marvel',
+			platform: '',
+			photo: 'img/hulk.jpg'
+		},
+
+		{
+			category: 'Colecionáveis',
+			description: 'Boneco Hulk Marvel',
+			platform: '',
+			photo: 'img/adam.jpg'
+		}
+	];
 
 	return {
 		all: function() {
-			return games;
+			console.log('teste', products)
+			return products;
 		}
 	};
 })
-
-.factory('Collectibles', function() {
-	var collectibles = [{
-		description: 'Boneco Hulk Marvel',
-		platform: '',
-		category: 'Collectibles',
-		photo: 'img/hulk.jpg'
-	},
-
-	{
-		description: 'Boneco Hulk Marvel',
-		platform: '',
-		category: 'Collectibles',
-		photo: 'img/hulk.jpg'
-	}];
-
-	return {
-		all: function() {
-			return collectibles;
-		}
-	};
-});

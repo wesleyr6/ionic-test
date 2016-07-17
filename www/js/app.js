@@ -32,9 +32,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 	.state('tab.games', {
 		url: '/games',
 		views: {
-			'tab-games': {
+			'tab-products': {
 				templateUrl: 'templates/tab-products.html',
-				controller: 'GamesCtrl'
+				controller: 'ProductsCtrl'
 			}
 		}
 	})
@@ -42,9 +42,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 	.state('tab.collectibles', {
 		url: '/collectibles',
 		views: {
-			'tab-games': {
+			'tab-products': {
 				templateUrl: 'templates/tab-products.html',
-				controller: 'CollectiblesCtrl'
+				controller: 'ProductsCtrl'
 			}
 		}
 	})

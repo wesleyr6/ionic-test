@@ -3,7 +3,7 @@
         <div ng-include="'templates/category.html'"></div>
 		
 		<ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true" show-pager="false">
-	        <ion-slide ng-repeat="item in items">
+	        <ion-slide ng-repeat="item in items | filter:title">
 		        <div class="match-items">
 		        	<figure>
 						<img ng-src="{{item.photo}}">
