@@ -33,28 +33,28 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 		url: '/games',
 		views: {
 			'tab-games': {
-				templateUrl: 'templates/tab-games.html',
-				controller: 'GamesCtrl'
-			}
-		}
-	})
-
-	.state('tab.games2', {
-		url: '/games',
-		views: {
-			'tab-games': {
-				templateUrl: 'templates/tab-games2.html',
+				templateUrl: 'templates/tab-products.html',
 				controller: 'GamesCtrl'
 			}
 		}
 	})
 
 	.state('tab.collectibles', {
-		url: '/collectibles/:id',
+		url: '/collectibles',
 		views: {
-			'tab-collectibles': {
-				templateUrl: 'templates/tab-collectibles.html',
+			'tab-games': {
+				templateUrl: 'templates/tab-products.html',
 				controller: 'CollectiblesCtrl'
+			}
+		}
+	})
+
+	.state('tab.match', {
+		url: '/games',
+		views: {
+			'tab-games': {
+				templateUrl: 'templates/tab-match.html',
+				controller: 'GamesCtrl'
 			}
 		}
 	})
