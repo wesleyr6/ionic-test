@@ -64,15 +64,19 @@ angular.module('starter.services', [])
 	return {
 		all: function() {
 			return accountItems;
-		},
-		remove: function(chat) {
-			accountItems.splice(accountItems.indexOf(chat), 1);
 		}
 	};
 })
 
 .factory('Products', function() {
 	var products = [
+		{
+			category: 'Games',
+			description: 'Diablo III',
+			platform: 'PC',
+			photo: 'img/diablo3.jpg'
+		},
+
 		{
 			category: 'Games',
 			description: 'Batman Arkan City',
@@ -82,9 +86,23 @@ angular.module('starter.services', [])
 
 		{
 			category: 'Games',
-			description: 'Batman Arkan City',
-			platform: 'Xbox',
-			photo: 'img/ben.png'
+			description: 'Counter Strike Source',
+			platform: 'PC',
+			photo: 'img/cs.jpg'
+		},
+
+		{
+			category: 'Games',
+			description: 'FIFA 17',
+			platform: 'PS4',
+			photo: 'img/fifa17.jpg'
+		},
+
+		{
+			category: 'Games',
+			description: 'GTA IV',
+			platform: 'PS4',
+			photo: 'img/gta5.jpg'
 		},
 
 		{
@@ -96,15 +114,34 @@ angular.module('starter.services', [])
 
 		{
 			category: 'Colecionáveis',
-			description: 'Boneco Hulk Marvel',
+			description: 'Boneco Capitão América',
 			platform: '',
-			photo: 'img/adam.jpg'
+			photo: 'img/capitao-america.jpg'
+		},
+
+		{
+			category: 'Colecionáveis',
+			description: 'Boneco Thor Vingadores',
+			platform: '',
+			photo: 'img/thor.jpg'
+		},
+
+		{
+			category: 'Colecionáveis',
+			description: 'Carro Batman Batmóvel',
+			platform: '',
+			photo: 'img/batmovel.jpg'
 		}
 	];
 
 	return {
 		all: function() {
 			return products;
+		},
+
+		remove: function(item) {
+			console.log('dsa', item)
+			products.splice(products.indexOf(item), 1);
 		}
 	};
 })
