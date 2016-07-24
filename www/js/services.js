@@ -3,29 +3,44 @@ angular.module('starter.services', [])
 .factory('Chats', function() {
 	var chats = [{
 		id: 0,
-		name: 'Ytalo dos Santos',
+		name: 'Marcelo Gervasio',
 		lastText: 'Batman Arkan City',
-		face: 'img/ben.png'
+		face: 'img/marcelo.jpg'
 	}, {
 		id: 1,
 		name: 'Bruno Nascimento',
-		lastText: 'Batman Arkan City',
-		face: 'img/max.png'
+		lastText: 'Boneco Hulk',
+		face: 'img/bruno.jpg'
 	}, {
 		id: 2,
-		name: 'Adriano Alves',
+		name: 'Rodrigo Puzzello',
 		lastText: 'Volkswagem Fusca',
-		face: 'img/adam.jpg'
+		face: 'img/rodrigo.jpg'
 	}, {
 		id: 3,
-		name: 'Thiago Paulino',
-		lastText: 'Volkswagem Fusca',
-		face: 'img/perry.png'
+		name: 'César Matias',
+		lastText: 'FIFA 17 PS4',
+		face: 'img/cesar.jpg'
 	}, {
 		id: 4,
-		name: 'José Damiani',
+		name: 'Daniel Kono',
 		lastText: 'Batman Arkan City',
-		face: 'img/mike.png'
+		face: 'img/kono.jpg'
+	}, {
+		id: 5,
+		name: 'Danilo Papp',
+		lastText: 'Boneco Thor',
+		face: 'img/danilo.jpg'
+	}, {
+		id: 6,
+		name: 'Daniel Rocha ',
+		lastText: 'Batman Arkan City',
+		face: 'img/daniel.jpg'
+	}, {
+		id: 7,
+		name: 'Boaz Trindade',
+		lastText: 'Batman Arkan City',
+		face: 'img/boaz.jpg'
 	}];
 
 	return {
@@ -49,16 +64,16 @@ angular.module('starter.services', [])
 .factory('Account', function() {
 	var accountItems = [{
 		id: 0,
-		name: 'Batman Arkan City',
+		name: 'Diablo III',
 		category: 'Games',
-		description: 'Xbox',
-		photo: 'img/ben.png'
+		description: 'PC',
+		photo: 'img/diablo3.jpg'
 	}, {
 		id: 1,
-		name: 'Volkswagem Fusca',
-		category: 'Collectibles',
-		description: 'Miniatura',
-		photo: 'img/max.png'
+		name: 'FIFA 17',
+		category: 'Games',
+		description: 'PS4',
+		photo: 'img/fifa17.jpg'
 	}];
 
 	return {
@@ -71,6 +86,7 @@ angular.module('starter.services', [])
 .factory('Products', function() {
 	var products = [
 		{
+			id: 0,
 			category: 'Games',
 			description: 'Diablo III',
 			platform: 'PC',
@@ -78,6 +94,7 @@ angular.module('starter.services', [])
 		},
 
 		{
+			id: 1,
 			category: 'Games',
 			description: 'Batman Arkan City',
 			platform: 'Xbox',
@@ -85,6 +102,7 @@ angular.module('starter.services', [])
 		},
 
 		{
+			id: 2,
 			category: 'Games',
 			description: 'Counter Strike Source',
 			platform: 'PC',
@@ -92,6 +110,7 @@ angular.module('starter.services', [])
 		},
 
 		{
+			id: 3,
 			category: 'Games',
 			description: 'FIFA 17',
 			platform: 'PS4',
@@ -99,6 +118,7 @@ angular.module('starter.services', [])
 		},
 
 		{
+			id: 4,
 			category: 'Games',
 			description: 'GTA IV',
 			platform: 'PS4',
@@ -106,6 +126,7 @@ angular.module('starter.services', [])
 		},
 
 		{
+			id: 5,
 			category: 'Colecionáveis',
 			description: 'Boneco Hulk Marvel',
 			platform: '',
@@ -113,6 +134,7 @@ angular.module('starter.services', [])
 		},
 
 		{
+			id: 6,
 			category: 'Colecionáveis',
 			description: 'Boneco Capitão América',
 			platform: '',
@@ -120,6 +142,7 @@ angular.module('starter.services', [])
 		},
 
 		{
+			id: 7,
 			category: 'Colecionáveis',
 			description: 'Boneco Thor Vingadores',
 			platform: '',
@@ -127,6 +150,7 @@ angular.module('starter.services', [])
 		},
 
 		{
+			id: 8,
 			category: 'Colecionáveis',
 			description: 'Carro Batman Batmóvel',
 			platform: '',
@@ -135,13 +159,16 @@ angular.module('starter.services', [])
 	];
 
 	return {
-		all: function() {
-			return products;
-		},
+		all: function(pageTitle) {
+			var items = [];
 
-		remove: function(item) {
-			console.log('dsa', item)
-			products.splice(products.indexOf(item), 1);
+			for ( i = 0; i < products.length; i++ ) {
+				if ( products[i].category == pageTitle ) {
+					items.push(products[i]);
+				}
+			}
+
+			return items;
 		}
 	};
 })
