@@ -9,11 +9,11 @@ angular.module('starter.controllers', [])
 		$scope.title = 'Games';
 	}
 	
-	$scope.items = Products.all();
+	$scope.items = Products.all($scope.title);
 
 	$scope.nextSlide = function() {
 		$ionicSlideBoxDelegate.next();
-	}
+	};
 })
 
 .controller('MatchCtrl', function($scope, Match) {
