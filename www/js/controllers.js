@@ -2,13 +2,13 @@ angular.module('starter.controllers', [])
 
 .controller('ProductsCtrl', function($scope, $ionicSlideBoxDelegate, $location, Products) {
 	var getCategoryProduct = $location.path().split('/').pop();
-	
+
 	$scope.title = 'Colecionáveis';
 
-	if( getCategoryProduct == 'games' ){
+	if (getCategoryProduct === 'games') {
 		$scope.title = 'Games';
 	}
-	
+
 	$scope.items = Products.all($scope.title);
 
 	$scope.nextSlide = function() {
@@ -42,6 +42,4 @@ angular.module('starter.controllers', [])
 	$scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('LoginCtrl', function($scope) {
-	$scope.title = "TroqueJá"
-});
+.controller('LoginCtrl', function() {});
